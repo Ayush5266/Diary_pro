@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0027EE3B-A638-4254-926F-DF1EDFC644E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>diary_pro</RootNamespace>
+    <AssemblyName>diary_pro</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>89152_diary_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="comm_class.cs" />
+    <Compile Include="My_Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_Forms\about_us.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Forms\about_us.Designer.cs">
+      <DependentUpon>about_us.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_Forms\login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Forms\login_form.Designer.cs">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_Forms\memo_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Forms\memo_form.Designer.cs">
+      <DependentUpon>memo_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_Forms\search_memo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Forms\search_memo.Designer.cs">
+      <DependentUpon>search_memo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My_Forms\users_mang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My_Forms\users_mang.Designer.cs">
+      <DependentUpon>users_mang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="My_Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_Forms\about_us.resx">
+      <DependentUpon>about_us.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_Forms\login_form.resx">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_Forms\memo_form.resx">
+      <DependentUpon>memo_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_Forms\search_memo.resx">
+      <DependentUpon>search_memo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My_Forms\users_mang.resx">
+      <DependentUpon>users_mang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Data\docs\1.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2124221_search_document_app_essential_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2428666_docs_documents_memo_mobile_notes_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665904_toolbox_tools_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2639759_about_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326693_applications_settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2931142_minimize_minus_remove_line_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34217_close_delete_remove_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352306_desktop_windows_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Pics\1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Pics\2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Pics\3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Pics\4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Pics\5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Pics\6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Pics\7.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\music\1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\music\2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285657_floppy_guardar_save_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\user_pic\1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\282474_ok_done_check_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38999_exit_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\351980_decrease_format_indent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352285_content_copy_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352287_content_paste_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352378_align_format_justify_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352379_align_format_left_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352380_align_format_right_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352386_format_increase_indent_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8542283_redo_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8542647_undo_back_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\285657_floppy_guardar_save_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1608890_font_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6646342_bucket_color_editing_format_paint_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14643_color_rich_text_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352385_color_format_text_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="89152_diary_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
