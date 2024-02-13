@@ -1,6 +1,6 @@
 # Diary Pro
 
-![Diary Pro](link_to_project_image.png)
+![Diary Pro](https://github.com/Ayush5266/Diary_pro/blob/main/diary_pro/89152_diary_icon.ico)
 
 ## Overview
 
